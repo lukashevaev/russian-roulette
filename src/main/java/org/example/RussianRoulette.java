@@ -25,11 +25,14 @@ import java.util.Random;
  * Таким образом, вероятность 2-му игроку выжить при прокручивании барабана: 1 - 1/3 = 2/3 (66%).
  */
 public class RussianRoulette {
-
-    // Основной метод, эмулирующий шаги игроков в игре
-    // Происходит подсчет количества проигрышей как у первого игрока, так и у второго
+    // Метод для запуска программы и передачи количества экспериментов
     public static void main(String[] args) {
         var attempts = 10000;
+        rouletteEmulation(attempts);
+    }
+    // Основной метод, эмулирующий шаги игроков в игре
+    // Происходит подсчет количества проигрышей как у первого игрока, так и у второго
+    public static void rouletteEmulation(int attempts) {
         var firstPlayerFailures = 0;
         var secondPlayerPickNextFailures = 0;
         var secondPlayerPickRandomFailures = 0;
