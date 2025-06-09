@@ -27,8 +27,7 @@ import java.util.Random;
 public class RussianRoulette {
     // Метод для запуска программы и передачи количества экспериментов
     public static void main(String[] args) {
-        var attempts = 10000;
-        rouletteEmulation(attempts);
+        rouletteEmulation(Integer.parseInt(args[0]));
     }
     // Основной метод, эмулирующий шаги игроков в игре
     // Происходит подсчет количества проигрышей как у первого игрока, так и у второго
